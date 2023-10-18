@@ -3,4 +3,4 @@ name = "pipx-data"
 version = "0.0.0"
 
 [project.optional-dependencies]
-pipx = ["poetry==1.6.0",]
+pipx = ["poetry==1.6.1",]
