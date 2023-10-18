@@ -11,7 +11,7 @@ python = "^3.11"
 codespell = "2.2.0"
 
 [tool.poetry.group.pipx.dependencies]
-poetry = "1.6.0"
+poetry = "1.6.1"
 
 [build-system]
 requires = ["poetry-core"]
