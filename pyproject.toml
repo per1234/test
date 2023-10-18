@@ -10,15 +10,6 @@ python = "^3.11"
 [tool.poetry.group.dev.dependencies]
 codespell = "2.2.0"
 
-[project]
-dependencies = [
-  "poetry==1.6.1",
-  "yamllint==1.30.0"
-]
-
-[project.optional-dependencies]
-pipx = ["cowsay==6.0"]
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

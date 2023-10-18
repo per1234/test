@@ -1,0 +1,24 @@
+on: push
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version-file: pyproject.toml
+
+      - name: Install Poetry
+        run: |
+          pipx install \
+            --python "$(which python)" \
+            "$( \
+              yq \
+                --input-format toml \
+                --output-format yaml \
+                '.project.optional-dependencies.pipx[] | select(test("^poetry=="))' \
+                < "tools/pyproject.toml" \
+            )"
+
+      - run: |
+          poetry --version

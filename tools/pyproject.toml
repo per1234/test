@@ -1,0 +1,7 @@
+[project]
+dependencies = [
+  "cowsay==6.0"
+]
+
+[project.optional-dependencies]
+pipx = ["poetry==1.6.1"]
