@@ -10,7 +10,7 @@ python = "^3.11"
 [tool.poetry.group.dev.dependencies]
 codespell = "2.2.0"
 
-[tool.pipx.group.dev.dependencies]
+[project.dependencies]
 poetry = "1.6.0"
 
 [build-system]
