@@ -20,7 +20,7 @@ jobs:
                 --input-format toml \
                 --output-format yaml \
                 '.project.optional-dependencies.pipx[] | select(test("^poetry=="))' \
-                < "tools/pyproject.toml" \
+                < "pipx-data/pyproject.toml" \
             )"
 
       - run: |

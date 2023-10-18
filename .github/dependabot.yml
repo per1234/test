@@ -13,7 +13,7 @@ updates:
   - package-ecosystem: pip
     assignees:
       - per1234
-    directory: /tools/
+    directory: /pipx-data/
     schedule:
       interval: daily
     labels:
