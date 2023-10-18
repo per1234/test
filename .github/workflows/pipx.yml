@@ -19,9 +19,14 @@ jobs:
               yq \
                 --input-format toml \
                 --output-format yaml \
-                '.project.optional-dependencies.pipx[] | select(test("^poetry=="))' \
-                < "pipx-data/pyproject.toml" \
+                '.tool.poetry.group.pipx.dependencies.poetry' \
+                < pyproject.toml
             )"
 
       - run: |
           poetry --version
+
+      - run: |
+          poetry \
+            install \
+            --without pipx
