@@ -11,33 +11,33 @@ jobs:
         with:
           python-version-file: pyproject.toml
 
-      - name: yq version
-        run: |
-          yq --version
-
-      - name: run yq
-        run: |
-          yq \
-            --input-format toml \
-            --output-format yaml \
-            '.tool.poetry.group.pipx.dependencies.poetry' \
-            < pyproject.toml
-
-      - name: echo yq
-        run: |
-          echo "$( \
-              yq \
-                --input-format toml \
-                --output-format yaml \
-                '.tool.poetry.group.pipx.dependencies.poetry' \
-                < pyproject.toml
-            )"
+#       - name: yq version
+#         run: |
+#           yq --version
+# 
+#       - name: run yq
+#         run: |
+#           yq \
+#             --input-format toml \
+#             --output-format yaml \
+#             '.tool.poetry.group.pipx.dependencies.poetry' \
+#             < pyproject.toml
+# 
+#       - name: echo yq
+#         run: |
+#           echo "$( \
+#               yq \
+#                 --input-format toml \
+#                 --output-format yaml \
+#                 '.tool.poetry.group.pipx.dependencies.poetry' \
+#                 < pyproject.toml
+#             )"
 
       - name: Install Poetry
         run: |
           pipx install \
             --python "$(which python)" \
-            "$( \
+            "poetry==$( \
               yq \
                 --input-format toml \
                 --output-format yaml \
