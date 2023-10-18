@@ -144,7 +144,6 @@ jobs:
     name: build (${{ matrix.config.name }})
     needs:
       - select-targets
-    env:
     strategy:
       matrix:
         config: ${{ fromJson(needs.select-targets.outputs.build-matrix) }}
