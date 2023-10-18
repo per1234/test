@@ -1,0 +1,7 @@
+[project]
+dependencies = [
+  "yamllint==1.30.0",
+]
+
+[project.optional-dependencies]
+pipx = ["poetry==1.6.0",]
