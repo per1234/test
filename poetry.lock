@@ -2,20 +2,22 @@
 
 [[package]]
 name = "codespell"
-version = "2.2.0"
+version = "2.2.6"
 description = "Codespell"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.8"
 files = [
-    {file = "codespell-2.2.0-py3-none-any.whl", hash = "sha256:3cc3fcb484a8302683add19e7d11504c79c79b10d4ea0675409417a044b27374"},
-    {file = "codespell-2.2.0.tar.gz", hash = "sha256:3dce0cd1348d277f8d934d1d4dcbbf510f9ddfd1b9005e9b25fb983189962561"},
+    {file = "codespell-2.2.6-py3-none-any.whl", hash = "sha256:9ee9a3e5df0990604013ac2a9f22fa8e57669c827124a2e961fe8a1da4cacc07"},
+    {file = "codespell-2.2.6.tar.gz", hash = "sha256:a8c65d8eb3faa03deabab6b3bbe798bea72e1799c7e9e955d57eca4096abcff9"},
 ]
 
 [package.extras]
-dev = ["check-manifest", "flake8", "pytest", "pytest-cov", "pytest-dependency"]
+dev = ["Pygments", "build", "chardet", "pre-commit", "pytest", "pytest-cov", "pytest-dependency", "ruff", "tomli", "twine"]
 hard-encoding-detection = ["chardet"]
+toml = ["tomli"]
+types = ["chardet (>=5.1.0)", "mypy", "pytest", "pytest-cov", "pytest-dependency"]
 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "569ea3830f5776d1073bcd3d4b3d4dc104dea049301ca47d68d356fe03a76641"
+content-hash = "64baeea288584d7291665c856ba06b323a4a97d0c515e255c67dcb1d1b4b9b13"

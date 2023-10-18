@@ -8,7 +8,7 @@ authors = ["per1234 <nope@example.com>"]
 python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
-codespell = "2.2.0"
+codespell = "2.2.6"
 
 [build-system]
 requires = ["poetry-core"]
