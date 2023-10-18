@@ -2,5 +2,5 @@
 name = "foobar"
 version = "0.0.0"
 dependencies = [
-  "cowsay==6.0"
+  "cowsay==6.1"
 ]
