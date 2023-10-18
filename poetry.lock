@@ -17,5 +17,5 @@ hard-encoding-detection = ["chardet"]
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.12"
-content-hash = "7d1862c886094c0378264e8b7cd0f4d81f71e4b29a0f21bd56d332c04c6f4f3b"
+python-versions = "^3.11"
+content-hash = "569ea3830f5776d1073bcd3d4b3d4dc104dea049301ca47d68d356fe03a76641"
