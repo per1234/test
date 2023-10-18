@@ -16,6 +16,9 @@ dependencies = [
   "yamllint==1.30.0"
 ]
 
+[project.optional-dependencies]
+pipx = ["cowsay==6.0"]
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
