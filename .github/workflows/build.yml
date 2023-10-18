@@ -150,12 +150,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Old conditional
-        if: fromJSON(matrix.config.container).image == null
+      - name: New conditional ==
+        if: fromJSON(matrix.config.container) == null
         run: |
           echo hello
-
-      - name: New conditional
-        if: fromJSON(matrix.config.container) == null
+      - name: New conditional !=
+        if: fromJSON(matrix.config.container) != null
         run: |
           echo hello
