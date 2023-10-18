@@ -1,15 +1,6 @@
-[tool.poetry]
-name = "inoplatforms"
+[project]
+name = "foobar"
 version = "0.0.0"
-description = ""
-authors = ["per1234 <nope@example.com>"]
-
-[tool.poetry.dependencies]
-python = "^3.11"
-
-[tool.poetry.group.dev.dependencies]
-codespell = "2.2.0"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+dependencies = [
+  "cowsay==6.0"
+]

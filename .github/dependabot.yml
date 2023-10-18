@@ -1,20 +1,7 @@
-# See: https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#about-the-dependabotyml-file
 version: 2
 
 updates:
   - package-ecosystem: pip
-    assignees:
-      - per1234
     directory: /
     schedule:
       interval: daily
-    labels:
-      - "topic: infrastructure"
-  - package-ecosystem: pip
-    assignees:
-      - per1234
-    directory: /tools/
-    schedule:
-      interval: daily
-    labels:
-      - "topic: infrastructure"
