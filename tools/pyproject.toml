@@ -1,6 +1,6 @@
 [project]
 dependencies = [
-  "cowsay==6.0"
+  "yamllint==1.30.0"
 ]
 
 [project.optional-dependencies]
