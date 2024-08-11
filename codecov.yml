@@ -1,7 +1,0 @@
-# See: https://docs.codecov.com/docs/codecovyml-reference
-
-comment:
-  behavior: default
-  require_changes: false
-  require_head: false
-  require_base: false
