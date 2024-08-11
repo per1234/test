@@ -121,4 +121,5 @@ jobs:
         uses: codecov/codecov-action@v4
         with:
           fail_ci_if_error: ${{ github.repository == 'per1234/test' }}
+          file: coverage.xml
           token: ${{ env.CODECOV_TOKEN }}
