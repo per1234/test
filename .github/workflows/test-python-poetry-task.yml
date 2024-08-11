@@ -101,21 +101,6 @@ jobs:
       - name: Display code coverage report
         run: task python:coverage-report
 
-      # A token is used to avoid intermittent spurious job failures caused by rate limiting.
-      - name: Set up Codecov upload token
-        if: runner.os == 'Linux'
-        run: |
-          if [[ "${{ github.repository }}" == "per1234/test" ]]; then
-            # In order to avoid uploads of data from forks, only use the token for runs in the parent repo.
-            # Token is intentionally exposed.
-            # See: https://community.codecov.com/t/upload-issues-unable-to-locate-build-via-github-actions-api/3954
-            CODECOV_TOKEN="d12d3534-c10f-4c4f-bd2e-8a879c95a05b"
-          else
-            # codecov/codecov-action does unauthenticated upload if empty string is passed via the `token` input.
-            CODECOV_TOKEN=""
-          fi
-          echo "CODECOV_TOKEN=$CODECOV_TOKEN" >> "$GITHUB_ENV"
-
       - name: Send unit tests coverage to Codecov
         if: runner.os == 'Linux'
         uses: codecov/codecov-action@v4
@@ -125,4 +110,4 @@ jobs:
           disable_search: true
           fail_ci_if_error: true
           file: coverage.xml
-          token: ${{ env.CODECOV_TOKEN }}
+          token: ${{ secrets.CODECOV_TOKEN }}
