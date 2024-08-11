@@ -120,7 +120,5 @@ jobs:
         if: runner.os == 'Linux'
         uses: codecov/codecov-action@v4
         with:
-          file: ${{ matrix.module.path }}coverage_unit.txt
-          flags: ${{ matrix.module.codecov-flags }}
           fail_ci_if_error: ${{ github.repository == 'per1234/test' }}
           token: ${{ env.CODECOV_TOKEN }}
