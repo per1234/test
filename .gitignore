@@ -1,0 +1,8 @@
+# Python
+__pycache__/
+
+# Testing
+.coverage
+coverage.xml
+
+/node_modules/
