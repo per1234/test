@@ -1,4 +1,4 @@
 import test
 
 def test_foo():
-  assert test.foo() == 42
+  assert test.foo(None) == 42
