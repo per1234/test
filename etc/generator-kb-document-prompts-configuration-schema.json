@@ -1,0 +1,103 @@
+{
+  "title": "JSON schema for the @per1234/generator-kb-document prompts configuration file",
+  "description": "See: https://github.com/per1234/generator-kb-document#prompts-configuration-file",
+  "$id": "https://raw.githubusercontent.com/per1234/generator-kb-document/main/etc/generator-kb-document-prompts-configuration-schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "inquirer": {
+        "type": "object"
+      },
+      "operations": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["new", "supplement"]
+        },
+        "minItems": 1,
+        "uniqueItems": true
+      },
+      "usages": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["content", "front matter"]
+        },
+        "minItems": 1,
+        "uniqueItems": true
+      },
+      "frontMatterPath": {
+        "type": "string",
+        "minLength": 2
+      },
+      "processors": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "oneOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "processor": {
+                  "const": "csv"
+                },
+                "delimiter": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": ["processor"]
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "processor": {
+                  "const": "join"
+                },
+                "separator": {
+                  "type": "string"
+                }
+              },
+              "required": ["processor"]
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "processor": {
+                  "const": "kb-link"
+                }
+              },
+              "required": ["processor"]
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "processor": {
+                  "const": "sort"
+                }
+              },
+              "required": ["processor"]
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "processor": {
+                  "const": "template"
+                },
+                "template": {
+                  "type": "string"
+                }
+              },
+              "required": ["processor", "template"]
+            }
+          ]
+        }
+      }
+    },
+    "required": ["inquirer"]
+  },
+  "uniqueItems": true
+}
