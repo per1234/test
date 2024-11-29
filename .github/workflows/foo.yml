@@ -1,4 +1,4 @@
-# foo
+# foobar
 on:
   push: ~
   pull_request: ~
