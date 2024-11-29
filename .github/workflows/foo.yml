@@ -14,7 +14,7 @@ jobs:
       - run: echo hello > foo.txt
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v7
         with:
           commit-message: Updated themes
           title: Update themes
