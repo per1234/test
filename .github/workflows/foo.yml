@@ -1,3 +1,4 @@
+# foo
 on:
   push: ~
   pull_request: ~
