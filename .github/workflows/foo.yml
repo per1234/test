@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - run: echo hello > foo.txt
+      # - run: echo hello > foo.txt
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
