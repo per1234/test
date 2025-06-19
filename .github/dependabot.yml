@@ -1,0 +1,10 @@
+# See: https://docs.github.com/code-security/dependabot/working-with-dependabot/dependabot-options-reference#about-the-dependabotyml-file
+version: 2
+
+updates:
+  - package-ecosystem: pip
+    directory: /
+    open-pull-requests-limit: 100
+    schedule:
+      cronjob: 0 15 * * *
+      interval: cron
